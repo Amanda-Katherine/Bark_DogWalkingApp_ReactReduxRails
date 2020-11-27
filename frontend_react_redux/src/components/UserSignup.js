@@ -25,6 +25,13 @@ class UserSignup extends Component {
     this.setState({ [name]: e.target.value });
   }
 
+  handleSubmit(e) {
+    debugger;
+    console.log("handle submit");
+    //once addUser action is created...invoke it here.
+    //once editUser action is create...create a condition to invoke add/edit
+  }
+
   render() {
     return (
       <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
