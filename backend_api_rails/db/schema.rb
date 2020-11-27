@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_11_25_234942) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
+    t.string "gender"
     t.string "breed"
     t.string "age"
     t.string "avatar"
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_11_25_234942) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "gender"
     t.string "address"
     t.string "phone_number"
     t.string "username"
