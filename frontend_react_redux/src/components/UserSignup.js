@@ -16,6 +16,25 @@ class UserSignup extends Component {
       id: "",
     };
   }
+  render() {
+    return (
+      <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
+        <label>Name:</label>
+        <input
+          onChange={(synEvent) => this.handleChange(synEvent)}
+          type="text"
+          value={this.state.name}
+          name="name"
+        />
+        <br />
+        <label>Email:</label>
+        <input
+          onChange={(synEvent) => this.handleChange(synEvent)}
+          type="text"
+          value={this.state.email}
+          name="email"
+        />
+        <br />
         <label>Username:</label>
         <input
           onChange={(synEvent) => this.handleChange(synEvent)}
