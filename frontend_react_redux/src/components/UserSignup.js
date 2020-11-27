@@ -16,6 +16,15 @@ class UserSignup extends Component {
       id: "",
     };
   }
+
+  handleChange(e) {
+    let name = e.target.name;
+    // debugger;
+    console.log("handle change");
+    e.preventDefault();
+    this.setState({ [name]: e.target.value });
+  }
+
   render() {
     return (
       <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
