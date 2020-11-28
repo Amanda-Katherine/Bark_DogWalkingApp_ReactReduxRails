@@ -165,5 +165,4 @@ class UserSignup extends Component {
   }
 }
 
-export default UserSignup;
 export default connect(null, { addUser: addUser })(UserSignup);
