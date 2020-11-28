@@ -34,11 +34,34 @@ class UserSignup extends Component {
     // }
   }
 
-  handleSubmit(e) {
+  // handleUpload = () => {
+  //   axios.post();
+  // };
+
+  handleSubmit(synEvent) {
+    synEvent.preventDefault();
     debugger;
-    console.log("handle submit");
-    //once addUser action is created...invoke it here.
-    //once editUser action is create...create a condition to invoke add/edit
+    // const e = synEvent.target;
+    // console.log(e[9].files);
+    // debugger;
+    // const user = {
+    //   ...this.state,
+    //   name: e[0].value,
+    //   email: e[1].value,
+    //   username: e[2].value,
+    //   password: e[3].value,
+    //   gender: e[4].value,
+    //   userType: e[5].value,
+    //   address: e[6].value,
+    //   phoneNumber: e[7].value,
+    //   bio: e[8].value,
+    //   // avatar: e[9].files,
+    // };
+    // if (!this.props.user) {
+    this.props.addUser(this.state);
+    // } else {
+    //   this.props.editUser(this.state);
+    // }
   }
 
   render() {
