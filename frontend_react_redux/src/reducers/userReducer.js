@@ -1,4 +1,9 @@
-const users = (state = {}, action) => {
+const initialState = {
+  users: [],
+};
+
+export const userReducer = (state = initialState, action) => {
+  // debugger;
   switch (action.type) {
     case "ADD_USER":
       return console.log("add updated state info here");
@@ -8,4 +13,4 @@ const users = (state = {}, action) => {
   }
 };
 
-export default users;
+export default userReducer;
