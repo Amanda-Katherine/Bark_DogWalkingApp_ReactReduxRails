@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { addUser } from "../actions/users";
 import { connect } from "react-redux";
 
+// import axios from "axios";
+
 class UserSignup extends Component {
   constructor(props) {
     super(props);
@@ -10,12 +12,13 @@ class UserSignup extends Component {
       name: "",
       gender: "",
       email: "",
-      userType: "",
+      userable_type: "",
       address: "",
-      phoneNumber: "",
+      phone: "",
       username: "",
       password: "",
-      id: "",
+      bio: "",
+      // avatar: "",
     };
   }
 
