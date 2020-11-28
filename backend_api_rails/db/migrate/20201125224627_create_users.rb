@@ -4,10 +4,12 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :gender
       t.string :address
-      t.string :phone_number
+      t.string :phone
       t.string :username
       t.string :password_digest
       t.string :email
+      t.string :bio
+      t.string :avatar
       t.references :userable, polymorphic: true, null: false
 
       t.timestamps
