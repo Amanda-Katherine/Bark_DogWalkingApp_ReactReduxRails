@@ -1,3 +1,7 @@
+# class DogSerializer < ActiveModel::Serializer
+#   attributes :id
+# end
+
 class Api::V1::DogSerializer < ActiveModel::Serializer
   attributes :id
   belongs_to :owner
