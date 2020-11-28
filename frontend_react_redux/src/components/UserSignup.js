@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { addUser } from "../actions/users";
+import { connect } from "react-redux";
 
 class UserSignup extends Component {
   constructor(props) {
@@ -115,3 +117,4 @@ class UserSignup extends Component {
 }
 
 export default UserSignup;
+export default connect(null, { addUser: addUser })(UserSignup);
