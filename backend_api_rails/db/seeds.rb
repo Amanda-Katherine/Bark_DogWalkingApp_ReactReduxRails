@@ -15,19 +15,19 @@ Owner.create()
 Owner.create()
 Owner.create()
 
-User.create(name: "John Waggington", gender: "male", address: "231 P St NW, Washington DC 20001", phone_number: "000-000-0000", username: "j_wag67", password_digest: "pass", email: "jwag@woof.com", userable_type: "Walker", userable_id: 1)
+User.create(name: "John Waggington", gender: "male", address: "231 P St NW, Washington DC 20001", phone: "000-000-0000", username: "j_wag67", password_digest: "pass", email: "jwag@woof.com", userable_type: "Walker", userable_id: 1)
 
-User.create(name: "Sarah Barker", gender: "female", address: "57 Bates St St NW, Washington DC 20001", phone_number: "000-000-0000", username: "Barks_a_lot", password_digest: "pass", email: "email@woof.com", userable_type: "Walker", userable_id: 2)
+User.create(name: "Sarah Barker", gender: "female", address: "57 Bates St St NW, Washington DC 20001", phone: "000-000-0000", username: "Barks_a_lot", password_digest: "pass", email: "email@woof.com", userable_type: "Walker", userable_id: 2)
 
-User.create(name: "Candace Wiggle", gender: "female", address: "63 Hanover Place NW, Washington DC 20001", phone_number: "000-000-0000", username: "wiggle_waggle", password_digest: "pass", email: "email@wiggle.com", userable_type: "Walker", userable_id: 3)
+User.create(name: "Candace Wiggle", gender: "female", address: "63 Hanover Place NW, Washington DC 20001", phone: "000-000-0000", username: "wiggle_waggle", password_digest: "pass", email: "email@wiggle.com", userable_type: "Walker", userable_id: 3)
 
-User.create(name: "Gary Garyson", gender: "male", address: "700 8th St NW, Washington DC 20001", phone_number: "000-000-0000", username: "gary_the_snail", password_digest: "pass", email: "email@garyson.com", userable_type: "Owner", userable_id: 1)
+User.create(name: "Gary Garyson", gender: "male", address: "700 8th St NW, Washington DC 20001", phone: "000-000-0000", username: "gary_the_snail", password_digest: "pass", email: "email@garyson.com", userable_type: "Owner", userable_id: 1)
 
-User.create(name: "Bert Wooferson", gender: "male", address: "1558 15th Place NW, Washington DC 20001", phone_number: "000-000-0000", username: "sesame_13", password_digest: "pass", email: "woof@wooferson.com", userable_type: "Owner", userable_id: 2)
+User.create(name: "Bert Wooferson", gender: "male", address: "1558 15th Place NW, Washington DC 20001", phone: "000-000-0000", username: "sesame_13", password_digest: "pass", email: "woof@wooferson.com", userable_type: "Owner", userable_id: 2)
 
-User.create(name: "Ernest Howler", gender: "male", address: "22 K St NE, Washington DC 20002", phone_number: "000-000-0000", username: "good_dog", password_digest: "pass", email: "ernie@howler.com", userable_type: "Owner", userable_id: 3)
+User.create(name: "Ernest Howler", gender: "male", address: "22 K St NE, Washington DC 20002", phone: "000-000-0000", username: "good_dog", password_digest: "pass", email: "ernie@howler.com", userable_type: "Owner", userable_id: 3)
 
-# User.create(name: "", gender: "male", "", phone_number: "000-000-0000", username: "", password_digest: "pass", email: "", userable_type: "", userable_id: )
+# User.create(name: "", gender: "male", "", phone: "000-000-0000", username: "", password_digest: "pass", email: "", userable_type: "", userable_id: )
 
 # dog behaviors: friendly, aggresive, shy, is leash trained, pulls on leash, doesn't like other people, doesn't like other dogs, jumper, chases small animals
 
