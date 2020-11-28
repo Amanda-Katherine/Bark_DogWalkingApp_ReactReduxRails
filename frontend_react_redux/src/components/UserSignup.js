@@ -23,11 +23,15 @@ class UserSignup extends Component {
   }
 
   handleChange(e) {
-    let name = e.target.name;
     // debugger;
+    let name = e.target.name;
     console.log("handle change");
-    e.preventDefault();
+
+    // if (e.target.files) {
+    //   this.setState({ [name]: e.target.files });
+    // } else {
     this.setState({ [name]: e.target.value });
+    // }
   }
 
   handleSubmit(e) {
