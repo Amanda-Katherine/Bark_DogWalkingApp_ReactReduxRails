@@ -120,8 +120,8 @@ class UserSignup extends Component {
           name="userType"
         >
           <option value="blank"></option>
-          <option value="owner">Owner</option>
-          <option value="walker">Walker</option>
+          <option value="Owner">Owner</option>
+          <option value="Walker">Walker</option>
         </select>
         <br />
         <label>Address:</label>
