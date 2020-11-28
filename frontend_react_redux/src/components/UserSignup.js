@@ -148,6 +148,17 @@ class UserSignup extends Component {
           name="bio"
         />
         {/* <br />
+        <label>Avatar:</label>
+        <input
+          onChange={(synEvent) => this.handleChange(synEvent)}
+          type="file"
+          name="avatar"
+        />
+        <button onClick={this.handleUpload}>Upload Photo</button> */}
+        <br />
+        <br />
+        <br />
+
         <button type="submit">Sign Up</button>
       </form>
     );
