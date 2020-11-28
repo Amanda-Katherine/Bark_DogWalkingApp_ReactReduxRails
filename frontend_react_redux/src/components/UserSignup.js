@@ -140,6 +140,14 @@ class UserSignup extends Component {
           name="phone"
         />
         <br />
+        <label>Bio:</label>
+        <input
+          onChange={(synEvent) => this.handleChange(synEvent)}
+          type="textarea"
+          value={this.state.bio}
+          name="bio"
+        />
+        {/* <br />
         <button type="submit">Sign Up</button>
       </form>
     );
