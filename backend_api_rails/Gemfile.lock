@@ -159,14 +159,14 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   active_model_serializers
-  bcrypt (~> 3.1.7)
+  bcrypt (~> 3.1.15)
   bootsnap (>= 1.4.2)
   byebug
   faker
