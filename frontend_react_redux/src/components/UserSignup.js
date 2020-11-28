@@ -136,8 +136,8 @@ class UserSignup extends Component {
         <input
           onChange={(synEvent) => this.handleChange(synEvent)}
           type="text"
-          value={this.state.phoneNumber}
-          name="phoneNumber"
+          value={this.state.phone}
+          name="phone"
         />
         <br />
         <button type="submit">Sign Up</button>
