@@ -6,6 +6,10 @@ import { fetchUsers } from "../actions/users";
 // import { ROOT_API } from "../constants/index";
 
 class UserContainer extends Component {
+  componentDidMount() {
+    this.props.fetchUsers();
+    // debugger;
+  }
   render() {
     // debugger;
     return (
