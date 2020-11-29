@@ -25,10 +25,7 @@ class UserSignup extends Component {
   }
 
   handleChange(e) {
-    // debugger;
     let name = e.target.name;
-    console.log("handle change");
-
     // if (e.target.files) {
     //   this.setState({ [name]: e.target.files });
     // } else {
@@ -42,23 +39,7 @@ class UserSignup extends Component {
 
   handleSubmit(synEvent) {
     synEvent.preventDefault();
-    debugger;
-    // const e = synEvent.target;
-    // console.log(e[9].files);
-    // debugger;
-    // const user = {
-    //   ...this.state,
-    //   name: e[0].value,
-    //   email: e[1].value,
-    //   username: e[2].value,
-    //   password: e[3].value,
-    //   gender: e[4].value,
-    //   userType: e[5].value,
-    //   address: e[6].value,
-    //   phoneNumber: e[7].value,
-    //   bio: e[8].value,
-    //   // avatar: e[9].files,
-    // };
+
     // if (!this.props.user) {
     this.props.addUser(this.state);
     // } else {
