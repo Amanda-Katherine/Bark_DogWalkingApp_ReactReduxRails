@@ -54,6 +54,7 @@ class UserSignup extends Component {
     } else if (this.state.userType === "Owner") {
       userLabel = "How much are you willing to pay per hour?";
     }
+
     return (
       <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
         <label>Name:</label>
