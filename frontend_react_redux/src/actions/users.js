@@ -1,8 +1,8 @@
 import { ROOT_API } from "../constants";
 
-export const loginUser = (loginData) => {
-  return (dispatch) => {};
-};
+// export const loginUser = (loginData) => {
+//   return (dispatch) => {};
+// };
 
 export const fetchUsers = () => {
   return (dispatch) => {
