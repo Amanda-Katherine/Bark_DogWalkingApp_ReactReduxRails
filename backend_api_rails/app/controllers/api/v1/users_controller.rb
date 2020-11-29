@@ -1,7 +1,10 @@
 class Api::V1::UsersController < ApplicationController
     def index 
         users = User.all
-        render json: users
+        walkers = Walker.all
+        owners = Owner.all
+        # binding.pry
+        render json: [users, walkers, owners]
     end
 
     def create
