@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_211425) do
   end
 
   create_table "owners", force: :cascade do |t|
+    t.integer "payment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
