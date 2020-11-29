@@ -12,7 +12,9 @@ class UserSignup extends Component {
       name: "",
       gender: "",
       email: "",
-      userable_type: "",
+      userType: "",
+      radius: "",
+      payment: "",
       address: "",
       phone: "",
       username: "",
@@ -123,6 +125,22 @@ class UserSignup extends Component {
           <option value="Owner">Owner</option>
           <option value="Walker">Walker</option>
         </select>
+        <br />
+        <label placeholder="Please select User Type Above">
+          {this.state.userType !== "" ? `${userLabel}` : null}
+        </label>
+        {this.state.userType !== "" ? (
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="text"
+            value={
+              this.state.userType === "Walker"
+                ? this.state.radius
+                : this.state.payment
+            }
+            name={this.state.userType === "Walker" ? "radius" : "payment"}
+          />
+        ) : null}
         <br />
         <label>Address:</label>
         <input
