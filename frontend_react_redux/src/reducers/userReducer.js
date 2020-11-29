@@ -5,10 +5,14 @@ const initialState = {
 };
 
 export const userReducer = (state = initialState, action) => {
-  // debugger;
   switch (action.type) {
     case "FETCH_USERS":
-      return { ...state, users: action.payload };
+      return {
+        ...state,
+        users: action.payload[0],
+        walkers: action.payload[1],
+        owners: action.payload[2],
+      };
 
     case "ADD_USER":
       return { ...state, users: [...state.users, action.payload] };
