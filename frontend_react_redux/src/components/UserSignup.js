@@ -48,6 +48,12 @@ class UserSignup extends Component {
   }
 
   render() {
+    let userLabel;
+    if (this.state.userType === "Walker") {
+      userLabel = "How far you are willing to travel (in miles):";
+    } else if (this.state.userType === "Owner") {
+      userLabel = "How much are you willing to pay per hour?";
+    }
     return (
       <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
         <label>Name:</label>
