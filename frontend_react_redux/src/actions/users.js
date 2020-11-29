@@ -26,7 +26,13 @@ export const addUser = (user) => {
     fetch(`${ROOT_API}/users`, options)
       .then((resp) => resp.json())
       .then((user) => {
-        dispatch({ type: "ADD_USER", payload: user });
+        if (!user.error) {
+          dispatch({ type: "ADD_USER", payload: user });
+        } else {
+          alert(
+            "User not created. It's possible your username isn't unique or you left a field blank."
+          );
+        }
       });
   };
 };
