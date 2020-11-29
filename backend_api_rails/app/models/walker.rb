@@ -1,4 +1,4 @@
 class Walker < ApplicationRecord
     has_one :user, as: :userable
-    has_many :play_dates
+    has_many :appointments
 end
