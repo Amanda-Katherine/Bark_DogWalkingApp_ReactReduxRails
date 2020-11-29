@@ -35,6 +35,22 @@ class Api::V1::UsersController < ApplicationController
 
     def show 
         user = User.find_by_id(params[:id])
+        # binding.pry
+        if user.userable_type === "Walker"
+            appointments = user.userable.appointments
+            # binding.pry
+            render json: appointments
+        elsif user.userable_type === "Owner"
+            dogs = user.userable.dogs
+            dogs_appointments = []
+
+            dogs.map do |dog| 
+                dogs_appointments.push(dog.appointments)
+            end
+            # binding.pry
+            render json: [dogs: dogs, appointments: dogs_appointments]
+            
+        end
     end
 
 
