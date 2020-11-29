@@ -17,7 +17,11 @@ class Api::V1::UsersController < ApplicationController
             klass.payment = params[:payment]
         end
         user = User.create(user_params)
-        binding.pry
+        user.password = params[:password]
+        user.userable_type = params[:userType]
+        
+        klass.user = user
+        
 
         if user.valid? 
             render json: {user: UserSerializer.new(user)}, status: :created
