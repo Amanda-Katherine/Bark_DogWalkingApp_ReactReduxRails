@@ -15,7 +15,21 @@ export const userReducer = (state = initialState, action) => {
       };
 
     case "ADD_USER":
-      return { ...state, users: [...state.users, action.payload] };
+      let resp = action.payload;
+      let walkerArray = !!resp[1].type.walker
+        ? [...state.walkers, resp[1].type.walker]
+        : [...state.walkers];
+
+      let ownerArray = !!resp[1].type.owner
+        ? [...state.owners, resp[1].type.owner]
+        : [...state.owners];
+
+      return {
+        ...state,
+        users: [...state.users, resp[0].user],
+        walkers: walkerArray,
+        owners: ownerArray,
+      };
 
     default:
       return state;
