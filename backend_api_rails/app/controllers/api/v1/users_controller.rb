@@ -21,10 +21,15 @@ class Api::V1::UsersController < ApplicationController
         
         klass.user = user
 
-        if user.valid? 
-            render json: {user: UserSerializer.new(user)}, status: :created
+        if user.valid? && klass.valid? 
+            user.save
+            klass.save
+            (params[:userType] === "Owner") ? render_user = {owner: klass} : render_user = {walker: klass}
+            
+            render json: [{user: user}, {type: render_user}], status: :created
+
         else
-            render json: { error: 'failed to create user' }, status: :not_acceptable
+            render json: [{ error: 'failed to create user' }, {causation: user.errors.full_messages.push(render_user.errors.full_messages)}], status: :not_acceptable
         end
     end
 
