@@ -8,12 +8,11 @@ export const fetchUsers = () => {
   return (dispatch) => {
     fetch(`${ROOT_API}/users`)
       .then((resp) => resp.json())
-      .then((users) => dispatch({ type: "FETCH_USERS", payload: users }));
+      .then((userData) => dispatch({ type: "FETCH_USERS", payload: userData }));
   };
 };
 
 export const addUser = (user) => {
-  debugger;
   return (dispatch) => {
     const options = {
       method: "POST",
