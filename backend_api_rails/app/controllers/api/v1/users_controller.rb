@@ -3,7 +3,6 @@ class Api::V1::UsersController < ApplicationController
         users = User.all
         walkers = Walker.all
         owners = Owner.all
-        # binding.pry
         render json: [users, walkers, owners]
     end
 
@@ -21,7 +20,6 @@ class Api::V1::UsersController < ApplicationController
         user.userable_type = params[:userType]
         
         klass.user = user
-        
 
         if user.valid? 
             render json: {user: UserSerializer.new(user)}, status: :created
