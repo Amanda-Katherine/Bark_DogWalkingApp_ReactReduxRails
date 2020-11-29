@@ -8,6 +8,14 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
+        
+        klass = params[:userType].classify.safe_constantize.new
+        
+        if (params[:userType] === "Walker")
+            klass.radius = params[:radius]
+        elsif (params[:userType] === "Owner")
+            klass.payment = params[:payment]
+        end
         user = User.create(user_params)
         binding.pry
 
