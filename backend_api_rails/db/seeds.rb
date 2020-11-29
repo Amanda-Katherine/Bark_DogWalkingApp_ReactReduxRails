@@ -11,9 +11,9 @@ Walker.create(radius: 20, rating: 3.83)
 Walker.create(radius: 25, rating: 4.7)
 # Walker.create(radius: , rating: )
 
-Owner.create()
-Owner.create()
-Owner.create()
+Owner.create(payment: 30)
+Owner.create(payment: 40)
+Owner.create(payment: 20)
 
 User.create(name: "John Waggington", gender: "male", address: "231 P St NW, Washington DC 20001", phone: "000-000-0000", username: "j_wag67", password_digest: "pass", email: "jwag@woof.com", userable_type: "Walker", userable_id: 1)
 
