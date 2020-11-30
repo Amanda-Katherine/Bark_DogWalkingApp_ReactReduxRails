@@ -122,10 +122,11 @@ class UserSignup extends Component {
               <option value="withhold">I prefer not to say</option>
             </select>
           </div>
+          <label>Walker or Owner:</label>
           <select
-            value={this.state.gender}
             onChange={(synEvent) => this.handleChange(synEvent)}
-            name="gender"
+            value={this.state.userType}
+            name="userType"
           >
             <option value="blank"></option>
             <option value="female">Female</option>
