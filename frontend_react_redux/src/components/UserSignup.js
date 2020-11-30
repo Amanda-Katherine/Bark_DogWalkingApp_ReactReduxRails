@@ -153,12 +153,8 @@ class UserSignup extends Component {
           <input
             onChange={(synEvent) => this.handleChange(synEvent)}
             type="text"
-            value={
-              this.state.userType === "Walker"
-                ? this.state.radius
-                : this.state.payment
-            }
-            name={this.state.userType === "Walker" ? "radius" : "payment"}
+            value={this.state.address}
+            name="address"
           />
         ) : null}
         <br />
