@@ -5,8 +5,9 @@
 class Api::V1::UserSerializer < ActiveModel::Serializer
   attributes :id, :name, :gender, :email, :userType, :address, :phoneNumber, :username, :password, :bio, :avatar
   belongs_to :userable, polymorphic: true
+
     class Api::V1::OwnerSerializer < ActiveModel::Serializer
-      attributes :id    
+      attributes :id, :payment    
       has_one :user, as: :userable
       has_many :dogs
     end 
