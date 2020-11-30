@@ -156,32 +156,23 @@ class UserSignup extends Component {
             value={this.state.address}
             name="address"
           />
-        ) : null}
-        <br />
-        <label>Address:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="text"
-          value={this.state.address}
-          name="address"
-        />
-        <br />
-        <label>Phone Number:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="text"
-          value={this.state.phone}
-          name="phone"
-        />
-        <br />
-        <label>Bio:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="textarea"
-          value={this.state.bio}
-          name="bio"
-        />
-        {/* <br />
+          <br />
+          <label>Phone Number:</label>
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="text"
+            value={this.state.phone}
+            name="phone"
+          />
+          <br />
+          <label>Bio:</label>
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="textarea"
+            value={this.state.bio}
+            name="bio"
+          />
+          {/* <br />
         <label>Avatar:</label>
         <input
           onChange={(synEvent) => this.handleChange(synEvent)}
@@ -189,12 +180,13 @@ class UserSignup extends Component {
           name="avatar"
         />
         <button onClick={this.handleUpload}>Upload Photo</button> */}
-        <br />
-        <br />
-        <br />
+          <br />
+          <br />
+          <br />
 
-        <button type="submit">Sign Up</button>
-      </form>
+          <button type="submit">Sign Up</button>
+        </form>
+      </>
     );
   }
 }
