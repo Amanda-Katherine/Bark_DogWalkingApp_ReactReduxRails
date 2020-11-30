@@ -45,6 +45,23 @@ class UserSignup extends Component {
     // } else {
     //   this.props.editUser(this.state);
     // }
+    this.setState({
+      name: "",
+      gender: "",
+      email: "",
+      userType: "",
+      radius: "",
+      payment: "",
+      address: "",
+      phone: "",
+      username: "",
+      password: "",
+      bio: "",
+      // avatar: "",
+    });
+    const newUserId = this.props.users[this.props.users.length - 1].id + 1;
+    const url = `/users/${newUserId}`;
+    <Redirect to={url} />;
   }
 
   render() {
