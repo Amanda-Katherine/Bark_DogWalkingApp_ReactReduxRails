@@ -36,3 +36,13 @@ export const addUser = (user) => {
       });
   };
 };
+
+export const fetchDogsAndAppointments = (userId) => {
+  return (dispatch) => {
+    fetch(`${ROOT_API}/${userId}`)
+      .then((resp) => resp.json())
+      .then((user) =>
+        dispatch({ type: "FETCH_DOGS_AND_APPOINTMENTS", payload: user })
+      );
+  };
+};
