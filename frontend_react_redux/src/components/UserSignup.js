@@ -132,22 +132,24 @@ class UserSignup extends Component {
             <option value="Owner">Owner</option>
             <option value="Walker">Walker</option>
           </select>
-        </div>
-        <label>Walker or Owner:</label>
-        <select
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          value={this.state.userType}
-          name="userType"
-        >
-          <option value="blank"></option>
-          <option value="Owner">Owner</option>
-          <option value="Walker">Walker</option>
-        </select>
-        <br />
-        <label placeholder="Please select User Type Above">
-          {this.state.userType !== "" ? `${userLabel}` : null}
-        </label>
-        {this.state.userType !== "" ? (
+          <br />
+          <label placeholder="Please select User Type Above">
+            {this.state.userType !== "" ? `${userLabel}` : null}
+          </label>
+          {this.state.userType !== "" ? (
+            <input
+              onChange={(synEvent) => this.handleChange(synEvent)}
+              type="text"
+              value={
+                this.state.userType === "Walker"
+                  ? this.state.radius
+                  : this.state.payment
+              }
+              name={this.state.userType === "Walker" ? "radius" : "payment"}
+            />
+          ) : null}
+          <br />
+          <label>Address:</label>
           <input
             onChange={(synEvent) => this.handleChange(synEvent)}
             type="text"
