@@ -191,4 +191,12 @@ class UserSignup extends Component {
   }
 }
 
-export default connect(null, { addUser: addUser })(UserSignup);
+const mapStateToProps = (state) => {
+  return {
+    users: state.users.users,
+  };
+};
+
+export default withRouter(
+  connect(mapStateToProps, { addUser: addUser })(UserSignup)
+);
