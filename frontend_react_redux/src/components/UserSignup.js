@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { addUser } from "../actions/users";
 import { connect } from "react-redux";
-
+import { Redirect, withRouter } from "react-router-dom";
+// import { compose } from "redux";
 // import axios from "axios";
 
 class UserSignup extends Component {
@@ -39,7 +40,6 @@ class UserSignup extends Component {
 
   handleSubmit(synEvent) {
     synEvent.preventDefault();
-
     // if (!this.props.user) {
     this.props.addUser(this.state);
     // } else {
