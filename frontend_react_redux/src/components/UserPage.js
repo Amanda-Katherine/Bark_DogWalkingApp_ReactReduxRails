@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchDogsAndAppointments } from "../actions/users";
+class UserPage extends Component {
   render() {
     return (
       <div>
@@ -8,4 +11,9 @@ import React, { Component } from "react";
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return state;
+};
+
 export default connect(mapStateToProps, { fetchDogsAndAppointments })(UserPage);
