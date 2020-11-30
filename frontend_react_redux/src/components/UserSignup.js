@@ -71,42 +71,57 @@ class UserSignup extends Component {
     } else if (this.state.userType === "Owner") {
       userLabel = "How much are you willing to pay per hour?";
     }
-
+    //  ;
     return (
-      <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
-        <label>Name:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="text"
-          value={this.state.name}
-          name="name"
-        />
-        <br />
-        <label>Email:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="text"
-          value={this.state.email}
-          name="email"
-        />
-        <br />
-        <label>Username:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="text"
-          value={this.state.username}
-          name="username"
-        />
-        <br />
-        <label>Password:</label>
-        <input
-          onChange={(synEvent) => this.handleChange(synEvent)}
-          type="password"
-          value={this.state.password}
-          name="password"
-        />
-        <div className="signup-dropdown">
-          <label>Gender:</label>
+      <>
+        <h1>User Signup</h1>
+        <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
+          <label>Name:</label>
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="text"
+            value={this.state.name}
+            name="name"
+          />
+          <br />
+          <label>Email:</label>
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="text"
+            value={this.state.email}
+            name="email"
+          />
+          <br />
+          <label>Username:</label>
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="text"
+            value={this.state.username}
+            name="username"
+          />
+          <br />
+          <label>Password:</label>
+          <input
+            onChange={(synEvent) => this.handleChange(synEvent)}
+            type="password"
+            value={this.state.password}
+            name="password"
+          />
+          <div className="signup-dropdown">
+            <label>Gender:</label>
+            <select
+              value={this.state.gender}
+              onChange={(synEvent) => this.handleChange(synEvent)}
+              name="gender"
+            >
+              <option value="blank"></option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="other">Other</option>
+              <option value="withhold">I prefer not to say</option>
+            </select>
+          </div>
           <select
             value={this.state.gender}
             onChange={(synEvent) => this.handleChange(synEvent)}
