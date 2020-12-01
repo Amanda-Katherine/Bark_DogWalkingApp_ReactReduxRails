@@ -1,9 +1,11 @@
 class Api::V1::UsersController < ApplicationController
     def index 
         users = User.all
-        walkers = Walker.all
-        owners = Owner.all
-        render json: [users, walkers, owners]
+        walkers = Walker.all.map{|walker| Api::V1::WalkerSerializer.new(walker)}
+        owners = Owner.all.map{|owner| Api::V1::OwnerSerializer.new(owner)}
+        users = User.all.map{|user| Api::V1::UserSerializer.new(user)}
+       
+        render json: {users: users, walkers: walkers, owners: owners}
     end
 
     def create
