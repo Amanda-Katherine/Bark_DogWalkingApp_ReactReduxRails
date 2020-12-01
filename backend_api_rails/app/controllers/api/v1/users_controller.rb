@@ -9,8 +9,12 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
+        user = User.create(user_params)
+        user.password = params[:password]
+        user.userable_type = params[:userType]
         
         klass = params[:userType].classify.safe_constantize.new
+        serialized_user = Api::V1::UserSerializer.new(user)
         
         if (params[:userType] === "Walker")
             klass.radius = params[:radius]
