@@ -6,7 +6,8 @@ class Api::V1::DogsController < ApplicationController
 
     def create
         dog = Dog.new(dog_params)
-        dog.owner_id = params[:ownerId]
+        user = User.find_by(id: params[:ownerId])
+        dog.owner = user.userable
         binding.pry
         if dog.valid? 
             dog.save
