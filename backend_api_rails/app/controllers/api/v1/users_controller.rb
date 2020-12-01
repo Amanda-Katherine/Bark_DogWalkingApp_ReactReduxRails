@@ -25,19 +25,14 @@ class Api::V1::UsersController < ApplicationController
             klass.payment = params[:payment]
             owner = Api::V1::OwnerSerializer.new(klass)
         end
-        user = User.create(user_params)
-        user.password = params[:password]
-        user.userable_type = params[:userType]
-        
-        klass.user = user
 
         if user.valid? && klass.valid? 
             user.save
             klass.save
-            (params[:userType] === "Owner") ? render_user = {owner: klass} : render_user = {walker: klass}
+            (params[:userType] === "Owner") ? render_user = {owner: owner} : render_user = {walker: walker}
             
-            render json: [{user: user}, {type: render_user}], status: :created
-
+            render json: [{user: serialized_user}, {type: render_user}], status: :created
+            
         else
             render json: [{ error: 'failed to create user' }, {causation: user.errors.full_messages.push(render_user.errors.full_messages)}], status: :not_acceptable
         end
