@@ -4,8 +4,9 @@ class Api::V1::UsersController < ApplicationController
         walkers = Walker.all.map{|walker| Api::V1::WalkerSerializer.new(walker)}
         owners = Owner.all.map{|owner| Api::V1::OwnerSerializer.new(owner)}
         users = User.all.map{|user| Api::V1::UserSerializer.new(user)}
-       
-        render json: {users: users, walkers: walkers, owners: owners}
+        appointments = Appointment.all.map{|appt| Api::V1::AppointmentSerializer.new(appt)}
+
+        render json: {users: users, walkers: walkers, owners: owners, appointments: appointments}
     end
 
     def create
