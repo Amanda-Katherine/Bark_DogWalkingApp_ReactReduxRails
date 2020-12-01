@@ -43,12 +43,8 @@ class Api::V1::UsersController < ApplicationController
         
         user = Api::V1::UserSerializer.new(u)
 
-        if user.userable_type === "Walker"
-            appointments = user.userable.appointments
-            render json: [{user: user}, {appointments: appointments}]
-        elsif user.userable_type === "Owner"
-            dogs = user.userable.dogs
-            dogs_appointments = []
+        if u.userable_type === "Walker"
+            appts = u.userable.appointments
 
             dogs.map do |dog| 
                 dogs_appointments.push(dog.appointments)
