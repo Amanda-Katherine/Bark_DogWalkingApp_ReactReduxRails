@@ -20,8 +20,10 @@ class Api::V1::UsersController < ApplicationController
         
         if (params[:userType] === "Walker")
             klass.radius = params[:radius]
+            walker = Api::V1::WalkerSerializer.new(klass)
         elsif (params[:userType] === "Owner")
             klass.payment = params[:payment]
+            owner = Api::V1::OwnerSerializer.new(klass)
         end
         user = User.create(user_params)
         user.password = params[:password]
