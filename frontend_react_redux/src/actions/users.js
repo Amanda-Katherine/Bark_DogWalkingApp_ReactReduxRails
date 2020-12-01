@@ -12,7 +12,7 @@ export const fetchUsers = () => {
   };
 };
 
-export const addUser = (user) => {
+export const addUser = (user, history) => {
   return (dispatch) => {
     const options = {
       method: "POST",
@@ -27,7 +27,9 @@ export const addUser = (user) => {
       .then((resp) => resp.json())
       .then((user) => {
         if (!user.error) {
+          debugger;
           dispatch({ type: "ADD_USER", payload: user });
+          history.push(`/users/${user[0].user.id}`);
         } else {
           alert(
             "User not created. It's possible your username isn't unique or you left a field blank."
