@@ -14,6 +14,8 @@ class Api::V1::UsersController < ApplicationController
         user.userable_type = params[:userType]
         
         klass = params[:userType].classify.safe_constantize.new
+       
+        klass.user = user
         serialized_user = Api::V1::UserSerializer.new(user)
         
         if (params[:userType] === "Walker")
