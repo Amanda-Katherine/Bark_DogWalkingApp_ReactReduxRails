@@ -1,10 +1,27 @@
 import { ROOT_API } from "../constants";
 
-// export const fetchDogsAndAppointments = (userId) => {
-//   return (dispatch) => {
-//     fetch(`${ROOT_API}/${userId}`)
-//       .then((resp) => resp.json())
-//       //   .then((u) => console.log(u));
-//       .then((user) => dispatch({ type: "FETCH_DOGS", payload: user }));
-//   };
-// };
+export const addDog = (dog, history) => {
+  debugger;
+  return (dispatch) => {
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(dog),
+    };
+
+    fetch(`${ROOT_API}/dogs`, options)
+      .then((resp) => resp.json())
+      .then((dog) => {
+        if (!dog.error) {
+          debugger;
+          dispatch({ type: "ADD_DOG", payload: dog });
+          history.push(`/users/${dog.ownerId}`);
+        } else {
+          alert("Dog not created.", dog.error);
+        }
+      });
+  };
+};
