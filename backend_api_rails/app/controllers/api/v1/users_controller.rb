@@ -47,10 +47,25 @@ class Api::V1::UsersController < ApplicationController
         if u.userable_type === "Walker"
             appts = u.userable.appointments
 
-            dogs.map do |dog| 
-                dogs_appointments.push(dog.appointments)
+            appointments = appts.map{|apmt| Api::V1::AppointmentSerializer.new(apmt)}
+            
+            render json: {user: user, appointments: appointments}
+        elsif u.userable_type === "Owner"
+            canines = u.userable.dogs
+            dogs_appointments = []
+          
+            canines.each do |dog| 
+                dog_appts = dog.appointments
+                
+                dog_appts.each do |appt|
+                    dogs_appointments.push(appt)
+                end
             end
-            render json: [user: user, dogs: dogs, appointments: dogs_appointments] 
+
+            dogs = canines.map{|dog| Api::V1::DogSerializer.new(dog)}
+            appointments = dogs_appointments.map{|appt| Api::V1::AppointmentSerializer.new(appt)}
+            
+            render json: {user: user, dogs: dogs, appointments: appointments} 
         end
     end
 
