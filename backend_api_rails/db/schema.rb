@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_211425) do
     t.integer "duration"
     t.boolean "available", default: true
     t.bigint "dog_id", null: false
-    t.bigint "walker_id", null: false
+    t.bigint "walker_id", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dog_id"], name: "index_appointments_on_dog_id"
