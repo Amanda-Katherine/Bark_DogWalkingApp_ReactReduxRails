@@ -39,7 +39,9 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def show 
-        user = User.find_by_id(params[:id])
+        u = User.find_by_id(params[:id])
+        
+        user = Api::V1::UserSerializer.new(u)
 
         if user.userable_type === "Walker"
             appointments = user.userable.appointments
