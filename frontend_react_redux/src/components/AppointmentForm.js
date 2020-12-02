@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addAppointment } from "../actions/appointments";
 class AppointmentForm extends Component {
   constructor(props) {
     super(props);
@@ -20,3 +22,11 @@ class AppointmentForm extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    dogs: state.users.user.dogs,
+  };
+};
+
+export default connect(mapStateToProps, { addAppointment })(AppointmentForm);
