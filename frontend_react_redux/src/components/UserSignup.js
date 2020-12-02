@@ -41,7 +41,7 @@ class UserSignup extends Component {
   handleSubmit(synEvent) {
     synEvent.preventDefault();
     // if (!this.props.user) {
-    this.props.addUser(this.state);
+    this.props.addUser(this.state, this.props.history);
     // } else {
     //   this.props.editUser(this.state);
     // }
@@ -59,19 +59,17 @@ class UserSignup extends Component {
       bio: "",
       // avatar: "",
     });
-    const newUserId = this.props.users[this.props.users.length - 1].id + 1;
-    const url = `/users/${newUserId}`;
-    <Redirect to={url} />;
   }
 
   render() {
     let userLabel;
+    // debugger;
     if (this.state.userType === "Walker") {
       userLabel = "How far you are willing to travel (in miles):";
     } else if (this.state.userType === "Owner") {
       userLabel = "How much are you willing to pay per hour?";
     }
-    //  ;
+
     return (
       <>
         <h1>User Signup</h1>
