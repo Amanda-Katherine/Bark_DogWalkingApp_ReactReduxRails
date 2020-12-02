@@ -23,6 +23,13 @@ class DogForm extends Component {
       ownerId: parseInt(this.props.match.params.id),
     };
   }
+  handleChange(event) {
+    let name = event.target.name;
+    this.setState({
+      [name]: event.target.value,
+    });
+  }
+
   render() {
     return (
       <div>
