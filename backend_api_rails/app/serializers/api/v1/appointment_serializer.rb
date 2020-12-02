@@ -4,4 +4,8 @@ class Api::V1::AppointmentSerializer < ActiveModel::Serializer
   belongs_to :walker
   has_many :owners, through: :dogs
 
+  def dogId
+    self.object.dog_id
+  end
+
 end
