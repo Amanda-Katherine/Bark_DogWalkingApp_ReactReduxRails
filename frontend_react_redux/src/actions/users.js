@@ -2,6 +2,7 @@ import { ROOT_API } from "../constants";
 
 // export const loginUser = (loginData) => {
 //   return (dispatch) => {};
+//BUILD OUT ACTION
 // };
 
 export const fetchUsers = () => {
@@ -40,11 +41,14 @@ export const addUser = (user, history) => {
 };
 
 export const fetchDogsAndAppointments = (userId) => {
-  return (dispatch) => {
-    fetch(`${ROOT_API}/${userId}`)
-      .then((resp) => resp.json())
-      .then((user) =>
-        dispatch({ type: "FETCH_DOGS_AND_APPOINTMENTS", payload: user })
-      );
+  return async (dispatch) => {
+    const response = await fetch(`${ROOT_API}/${userId}`);
+
+    const data = await response.json();
+    if (data.message) {
+      alert("Error! This data not received", data);
+    } else {
+      dispatch({ type: "FETCH_DOGS_AND_APPOINTMENTS", payload: data });
+    }
   };
 };
