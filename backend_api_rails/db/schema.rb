@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_211425) do
     t.string "time"
     t.string "address"
     t.integer "duration"
+    t.float "compensation"
     t.boolean "available", default: true
     t.bigint "dog_id", null: false
     t.bigint "walker_id", default: 0, null: false
