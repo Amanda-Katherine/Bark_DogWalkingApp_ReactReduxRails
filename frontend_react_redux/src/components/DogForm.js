@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { addDog } from "../actions/dogs";
 import { connect } from "react-redux";
 
@@ -23,6 +24,29 @@ class DogForm extends Component {
       ownerId: parseInt(this.props.match.params.id),
     };
   }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log("adding dog");
+    // if (!this.props.list) {
+    this.props.addDog(this.state, this.props.history);
+    // } else {
+    //   this.props.editDog(this.state);
+    // }
+
+    this.setState({
+      name: "",
+      gender: "",
+      breed: "",
+      age: "",
+      //   avatar: "",
+      weight: "",
+      allergies: "",
+      behaviors: "",
+      ownerId: parseInt(this.props.match.params.id),
+    });
+  }
+
   handleChange(event) {
     let name = event.target.name;
     this.setState({
