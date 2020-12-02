@@ -46,10 +46,13 @@ class UserContainer extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
-  //   debugger;
   return {
     users: state.users.users,
+    walkers: state.users.walkers,
+    owners: state.users.owners,
+    appointments: state.users.appointments,
   };
 };
 
