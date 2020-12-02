@@ -9,8 +9,6 @@ class Api::V1::DogSerializer < ActiveModel::Serializer
   has_many :walkers, through: :appointments
 
   def ownerId 
-    # binding.pry
-    :owner_id.to_s.camelize(:lower)
-    # self.object.owner_id
+    self.object.owner_id
   end
 end
