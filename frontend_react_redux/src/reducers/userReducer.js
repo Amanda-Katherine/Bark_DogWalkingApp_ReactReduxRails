@@ -35,6 +35,29 @@ export const userReducer = (state = initialState, action) => {
         owners: ownerArray,
       };
 
+    case "FETCH_DOGS_AND_APPOINTMENTS":
+      console.log("dogs & appointments fetched");
+      let returnData =
+        Object.keys(action.payload).length === 3
+          ? {
+              ...initialState,
+              user: {
+                dogs: action.payload.dogs,
+                appointments: action.payload.appointments,
+                id: action.payload.user.id,
+                name: action.payload.user.name,
+              },
+            }
+          : {
+              ...initialState,
+              user: {
+                appointments: action.payload.appointments,
+                id: action.payload.user.id,
+                name: action.payload.user.name,
+              },
+            };
+
+      return returnData;
 
     case "ADD_APPOINTMENT":
       return {
