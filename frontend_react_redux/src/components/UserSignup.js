@@ -113,11 +113,11 @@ class UserSignup extends Component {
               name="gender"
             >
               <option value="blank"></option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="nonbinary">Non-binary</option>
-              <option value="other">Other</option>
-              <option value="withhold">I prefer not to say</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Non-binary">Non-binary</option>
+              <option value="Other">Other</option>
+              <option value="Did not disclose">I prefer not to say</option>
             </select>
           </div>
           <label>Walker or Owner:</label>
