@@ -33,8 +33,9 @@ html::before {
 
 .logo-icon {
   max-height: 40px;
-  padding-right: 1px;
   image: url("images/logo-icon.png");
+  padding-right: 4rem;
+  vertical-align: middle;
 }
 
 .nav-link {
