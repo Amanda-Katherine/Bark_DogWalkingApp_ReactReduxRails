@@ -14,7 +14,7 @@ class AppointmentsPage extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="main-container">
         <>{this.props.appointments && this.renderAppointments()}</>
       </div>
     );
