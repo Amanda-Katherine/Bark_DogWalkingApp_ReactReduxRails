@@ -63,7 +63,7 @@ class UserSignup extends Component {
 
   render() {
     let userLabel;
-    // debugger;
+
     if (this.state.userType === "Walker") {
       userLabel = "How far you are willing to travel (in miles):";
     } else if (this.state.userType === "Owner") {
