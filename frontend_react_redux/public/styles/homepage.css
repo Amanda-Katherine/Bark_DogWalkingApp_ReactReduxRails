@@ -45,12 +45,12 @@ html::before {
 }
 
 .logo-title {
+  /* padding-right: 1px; */
   font-family: "Architects Daughter", cursive;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 35px;
   color: rgb(0, 10, 95);
   padding-left: 0.2rem;
-  padding-right: 4rem;
 }
 
 .nav-container {
