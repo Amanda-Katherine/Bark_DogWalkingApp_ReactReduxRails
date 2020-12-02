@@ -26,7 +26,7 @@ class UserPage extends Component {
   render() {
     let props = this.props;
     return (
-      <div>
+      <div className="main-container">
         {props ? <h3>Welcome back, {props.name}.</h3> : ""}
         {!props.location.pathname.includes(
           "/dogs/new" || "/appointments/new"
