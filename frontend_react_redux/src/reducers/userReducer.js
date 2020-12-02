@@ -1,7 +1,9 @@
 const initialState = {
   users: [],
+  user: { dogs: [], appointments: [] },
   walkers: [],
   owners: [],
+  appointments: [],
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -29,6 +31,20 @@ export const userReducer = (state = initialState, action) => {
         users: [...state.users, resp[0].user],
         walkers: walkerArray,
         owners: ownerArray,
+      };
+
+
+    case "ADD_APPOINTMENT":
+      return {
+        ...state,
+        appointments: [...state.appointments, action.payload.appointment],
+        user: {
+          ...state.user,
+          appointments: [
+            ...state.user.appointments,
+            action.payload.appointment,
+          ],
+        },
       };
 
     default:
