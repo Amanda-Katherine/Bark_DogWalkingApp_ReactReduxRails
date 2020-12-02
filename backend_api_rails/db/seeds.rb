@@ -31,7 +31,7 @@ User.create(name: "Ernest Howler", gender: "male", address: "22 K St NE, Washing
 
 # dog behaviors: friendly, aggresive, shy, is leash trained, pulls on leash, doesn't like other people, doesn't like other dogs, jumper, chases small animals
 
-Dog.create(name: "Pepper", gender: "female", breed: "Heeler", age: "6 months", avatar: "blank", weight: 32, allergies: "none", behaviors: "friendly, jumper, chases small animals", owner_id: 2)
+Dog.create(name: "Pepper", gender: "female", breed: "Heeler", age: "0.5", avatar: "blank", weight: 32, allergies: "none", behaviors: "friendly, jumper, chases small animals", owner_id: 2)
 
 Dog.create(name: "Austin", gender: "female", breed: "Black Lab", age: "12", avatar: "blank", weight: "65", allergies: "none", behaviors: "friendly, doesn't like other dogs, is leash trained", owner_id: 1)
 
@@ -41,18 +41,18 @@ Dog.create(name: "Charles Barkley", gender: "male", breed: "Coon Hound", age: "5
 
 Dog.create(name: "Sir Alfred Waggington", gender: "male", breed: "Chihuahua", age: "12", avatar: "blank", weight: "8", allergies: "lamb", behaviors: "aggressive, pulls on leash, doesn't like other dogs, doesn't like other people", owner_id: 3)
 
-Appointment.create(date: "11/15/20", time: "5:30 PM", address: "1558 15th Place NW, Washington DC 20001", duration: "20 minutes", available: "false", walker_id: 1, dog_id: 1)
+Appointment.create(date: "11/15/20", time: "5:30 PM", address: "1558 15th Place NW, Washington DC 20001", duration: "20 minutes", compensation: "15.00", available: "false", walker_id: 1, dog_id: 1)
 
-Appointment.create(date: "11/19/20", time: "1 PM", address: "700 8th St NW, Washington DC 20001", duration: "15 minutes", available: "false", walker_id: 1, dog_id: 2)
+Appointment.create(date: "11/19/20", time: "1 PM", address: "700 8th St NW, Washington DC 20001", duration: "45 minutes", compensation: "35.00", available: "false", walker_id: 1, dog_id: 2)
 
-Appointment.create(date: "1/14/21", time: "12 PM", address: "1558 15th Place NW, Washington DC 20001", duration: "30 minutes", available: "false", walker_id: 2, dog_id: 3)
+Appointment.create(date: "1/14/21", time: "12 PM", address: "1558 15th Place NW, Washington DC 20001", duration: "30 minutes", compensation: "30.00", available: "false", walker_id: 2, dog_id: 3)
 
-Appointment.create(date: "12/21/20", time: "7 AM", address: "22 K St NE, Washington DC 20002", duration: "20 minutes", available: "false", walker_id: 2, dog_id: 4)
+Appointment.create(date: "12/21/20", time: "7 AM", address: "22 K St NE, Washington DC 20002", duration: "60 minutes", compensation: "45.00", available: "false", walker_id: 2, dog_id: 4)
 
-Appointment.create(date: "1/12/21", time: "6 PM", address: "22 K St NE, Washington DC 20002", duration: "45 minutes", available: "false", walker_id: 3, dog_id: 5)
+Appointment.create(date: "1/12/21", time: "6 PM", address: "22 K St NE, Washington DC 20002", duration: "45 minutes", compensation: "30.00", available: "false", walker_id: 3, dog_id: 5)
 
-Appointment.create(date: "12/28/20", time: "12:00", address: "1558 15th Place NW, Washington DC 20001", duration: "1 hour", walker_id: 0, dog_id: 1)
+Appointment.create(date: "12/28/20", time: "12:00", address: "1558 15th Place NW, Washington DC 20001", duration: "1 hour", compensation: "35.00", walker_id: 0, dog_id: 1)
 
-Appointment.create(date: "11/20/20", time: "4 PM", address: "700 8th St NW, Washington DC 20001", duration: "15 minutes", available: "false", walker_id: 1, dog_id: 2)
+Appointment.create(date: "11/20/20", time: "4 PM", address: "700 8th St NW, Washington DC 20001", duration: "15 minutes", compensation: "20.00", available: "false", walker_id: 1, dog_id: 2)
 
-Appointment.create(date: "12/16/20", time: "5 PM", address: "1558 15th Place NW, Washington DC 20001", duration: "30 minutes", walker_id: 0, dog_id: 3)
+Appointment.create(date: "12/16/20", time: "5 PM", address: "1558 15th Place NW, Washington DC 20001", duration: "30 minutes", compensation: "20.00", walker_id: 0, dog_id: 3)
