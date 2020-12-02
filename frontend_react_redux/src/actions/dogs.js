@@ -1,7 +1,6 @@
 import { ROOT_API } from "../constants";
 
 export const addDog = (dog, history) => {
-  debugger;
   return (dispatch) => {
     const options = {
       method: "POST",
@@ -16,7 +15,6 @@ export const addDog = (dog, history) => {
       .then((resp) => resp.json())
       .then((dog) => {
         if (!dog.error) {
-          debugger;
           dispatch({ type: "ADD_DOG", payload: dog });
           history.push(`/users/${dog.ownerId}`);
         } else {
