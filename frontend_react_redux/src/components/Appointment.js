@@ -19,6 +19,13 @@ export default function Appointment(props) {
     behaviors,
     allergies,
   } = props.appointment.dog;
+
+  const handleBooking = (event) => {
+    event.preventDefault();
+    // props.acceptWalk(event.target.value);
+    //BUILD OUT ACCEPT WALK ACTION AND REDUCER ONCE SESSIONS CAPABLE
+  };
+
   return (
     <div>
     </div>
