@@ -1,21 +1,48 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import UserSignup from "../components/UserSignup";
-// import { addUser } from "../actions/users";
 import { fetchUsers } from "../actions/users";
-// import { ROOT_API } from "../constants/index";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import UserSignup from "../components/UserSignup";
+import UsersPage from "../components/UsersPage";
+import UserPage from "../components/UserPage";
+import AppointmentsPage from "../components/AppointmentsPage";
 
 class UserContainer extends Component {
   componentDidMount() {
+    console.log("fetching users");
     this.props.fetchUsers();
-    // debugger;
   }
+
   render() {
-    // debugger;
     return (
-      <div>
-        <UserSignup />
-      </div>
+      <>
+        <Route
+          exact
+          path="/signup"
+          render={(routerProps) => <UserSignup {...routerProps} />}
+        />
+        {/* <Route
+          path="/users"
+          allUsers={this.props.users}
+          allOwners={this.props.owners}
+          allWalkers={this.props.walkers}
+          component={UsersPage}
+        /> */}
+        <Route
+          path="/users/:id"
+          render={(routerProps) => <UserPage {...routerProps} />}
+        />
+        <Route
+          exact
+          path="/appointments"
+          render={(routerProps) => (
+            <AppointmentsPage
+              appointments={this.props.appointments}
+              {...routerProps}
+            />
+          )}
+        />
+      </>
     );
   }
 }
