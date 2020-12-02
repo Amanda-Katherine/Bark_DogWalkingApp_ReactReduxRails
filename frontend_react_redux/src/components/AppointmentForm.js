@@ -38,7 +38,7 @@ class AppointmentForm extends Component {
     // } else {
     //   this.props.editDog(this.state);
     // }
-    debugger;
+
     this.setState({
       date: "",
       time: "",
@@ -52,7 +52,6 @@ class AppointmentForm extends Component {
   }
 
   render() {
-    // debugger;
     return (
       <div>
         <form onSubmit={(event) => this.handleSubmit(event)}>
