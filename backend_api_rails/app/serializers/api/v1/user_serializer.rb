@@ -1,5 +1,5 @@
 class Api::V1::UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :gender, :email, :userable_type, :address, :phone, :username, :password, :bio, :avatar
+  attributes :id, :name, :gender, :email, :userType, :address, :phone, :username, :password, :bio, :avatar
   belongs_to :userable, polymorphic: true
 
   def userType 
