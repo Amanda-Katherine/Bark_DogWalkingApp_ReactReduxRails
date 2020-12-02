@@ -8,7 +8,6 @@ class Api::V1::DogsController < ApplicationController
         dog = Dog.new(dog_params)
         user = User.find_by(id: params[:ownerId])
         dog.owner = user.userable
-        binding.pry
         if dog.valid? 
             dog.save
             render json: {dog: dog}
