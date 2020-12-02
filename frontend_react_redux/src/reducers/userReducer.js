@@ -59,6 +59,13 @@ export const userReducer = (state = initialState, action) => {
 
       return returnData;
 
+    case "ADD_DOG":
+      console.log("added new dog");
+      return {
+        ...state,
+        user: { dogs: [...state.user.dogs, action.payload.dog] },
+      };
+
     case "ADD_APPOINTMENT":
       return {
         ...state,
