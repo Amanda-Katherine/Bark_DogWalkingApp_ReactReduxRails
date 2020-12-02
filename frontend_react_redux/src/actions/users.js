@@ -28,7 +28,6 @@ export const addUser = (user, history) => {
       .then((resp) => resp.json())
       .then((user) => {
         if (!user.error) {
-          debugger;
           dispatch({ type: "ADD_USER", payload: user });
           history.push(`/users/${user[0].user.id}`);
         } else {
