@@ -15,6 +15,15 @@ class AppointmentForm extends Component {
       walkerId: 0,
     };
   }
+
+  handleChange(event) {
+    let name = event.target.name;
+
+    this.setState({
+      [name]: event.target.value,
+    });
+  }
+
   render() {
     return (
       <div>
