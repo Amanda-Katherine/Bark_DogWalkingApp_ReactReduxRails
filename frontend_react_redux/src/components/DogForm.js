@@ -57,7 +57,10 @@ class DogForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={(event) => this.handleSubmit(event)}>
+        <form
+          className="main-container"
+          onSubmit={(event) => this.handleSubmit(event)}
+        >
           <label>Dog Name:</label>
           <input
             type="text"
