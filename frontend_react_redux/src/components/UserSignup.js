@@ -72,8 +72,11 @@ class UserSignup extends Component {
 
     return (
       <>
-        <h1>User Signup</h1>
-        <form onSubmit={(synEvent) => this.handleSubmit(synEvent)}>
+        <h1 className="main-container">User Signup</h1>
+        <form
+          className="main-container"
+          onSubmit={(synEvent) => this.handleSubmit(synEvent)}
+        >
           <label>Name:</label>
           <input
             onChange={(synEvent) => this.handleChange(synEvent)}
