@@ -9,11 +9,13 @@ const initialState = {
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_USERS":
+      console.log("users fetched");
       return {
         ...state,
-        users: action.payload[0],
-        walkers: action.payload[1],
-        owners: action.payload[2],
+        users: action.payload.users,
+        walkers: action.payload.walkers,
+        owners: action.payload.owners,
+        appointments: action.payload.appointments,
       };
 
     case "ADD_USER":
