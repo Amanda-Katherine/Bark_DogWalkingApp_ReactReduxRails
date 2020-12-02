@@ -53,7 +53,7 @@ class AppointmentForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main-container">
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <label>Date:</label>
           <input
