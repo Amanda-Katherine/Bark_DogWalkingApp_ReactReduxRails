@@ -6,8 +6,9 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers/index";
 import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 
-const initialState = { users: [], dogs: [], appointments: [] };
+const initialState = {};
 
 const store = createStore(
   rootReducer,
@@ -16,8 +17,11 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <App />
+    </Provider>
+    
+  </Router>,
   document.getElementById("root")
 );
