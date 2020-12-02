@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addAppointment } from "../actions/appointments";
+import Dog from "./Dog";
+
 class AppointmentForm extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,33 @@ class AppointmentForm extends Component {
     });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log("adding appointment");
+    // if (!this.props.list) {
+    this.props.addAppointment(
+      this.state,
+      this.props.history,
+      this.props.match.params.id
+    );
+    // } else {
+    //   this.props.editDog(this.state);
+    // }
+    debugger;
+    this.setState({
+      date: "",
+      time: "",
+      address: "",
+      duration: "",
+      available: true,
+      dogId: "",
+      compensation: "",
+      walkerId: 0,
+    });
+  }
+
   render() {
+    // debugger;
     return (
       <div>
         <form onSubmit={(event) => this.handleSubmit(event)}>
