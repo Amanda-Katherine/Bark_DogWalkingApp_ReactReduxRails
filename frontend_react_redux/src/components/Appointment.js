@@ -52,6 +52,7 @@ export default function Appointment(props) {
           </li>
           <li>Behaviors: {behaviors}</li>
           <li>Allergies: {allergies}</li>
+          <br />
           <button
             value={id}
             onClick={({ synEvent }) => {
