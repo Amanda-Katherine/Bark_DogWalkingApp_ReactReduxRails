@@ -16,6 +16,7 @@ class UserContainer extends Component {
   render() {
     return (
       <>
+        <Route exact path="/" />
         <Route
           exact
           path="/signup"
