@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { addDog } from "../actions/dogs";
+import { connect } from "react-redux";
+
 class DogForm extends Component {
   constructor(props) {
     super(props);
@@ -28,3 +31,4 @@ class DogForm extends Component {
   }
 }
 
+export default withRouter(connect(null, { addDog: addDog })(DogForm));
