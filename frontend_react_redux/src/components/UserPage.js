@@ -34,7 +34,20 @@ class UserPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return state;
+  let userData = state.users;
+  let returnedData = userData.user.dogs
+    ? {
+        id: userData.user.id,
+        name: userData.user.name,
+        appointments: userData.user.appointments,
+        dogs: userData.user.dogs,
+      }
+    : {
+        id: userData.user.id,
+        name: userData.user.name,
+        appointments: userData.user.appointments,
+      };
+  return returnedData;
 };
 
 export default connect(mapStateToProps, { fetchDogsAndAppointments })(UserPage);
