@@ -81,7 +81,7 @@ class AppointmentForm extends Component {
             name="address"
           />
           <br />
-          <label>For which dog?</label>
+          <label>Which dog is being walked?</label>
           <select
             type="text"
             onChange={(event) => this.handleChange(event)}
