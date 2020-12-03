@@ -40,7 +40,7 @@ export const userReducer = (state = initialState, action) => {
       let returnData =
         Object.keys(action.payload).length === 3
           ? {
-              ...initialState,
+              ...state,
               user: {
                 dogs: action.payload.dogs,
                 appointments: action.payload.appointments,
@@ -49,7 +49,7 @@ export const userReducer = (state = initialState, action) => {
               },
             }
           : {
-              ...initialState,
+              ...state,
               user: {
                 appointments: action.payload.appointments,
                 id: action.payload.user.id,
