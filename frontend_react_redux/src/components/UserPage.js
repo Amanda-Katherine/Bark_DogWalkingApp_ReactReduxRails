@@ -18,7 +18,7 @@ class UserPage extends Component {
   componentDidMount() {
     console.log("fetching dogs and appointments");
 
-    if (this.props.match) {
+    if (this.props.match.params.id && !this.props.id) {
       this.props.fetchDogsAndAppointments(this.props.match.url);
     }
   }
