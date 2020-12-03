@@ -23,7 +23,10 @@ export default function Appointment(props) {
   } = props.appointment.dog;
 
   const handleBooking = (event) => {
-    event.preventDefault();
+    console.log("call accept walk action once user login in capable");
+    console.log(event);
+    debugger;
+
     // props.acceptWalk(event.target.value);
     //BUILD OUT ACCEPT WALK ACTION AND REDUCER ONCE SESSIONS CAPABLE
   };
@@ -55,7 +58,7 @@ export default function Appointment(props) {
           <br />
           <button
             value={id}
-            onClick={({ synEvent }) => {
+            onClick={(synEvent) => {
               handleBooking(synEvent);
             }}
           >
