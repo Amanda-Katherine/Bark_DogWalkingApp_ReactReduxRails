@@ -6,6 +6,9 @@ Rails.application.routes.draw do
       resources :owners, except: [:new, :edit]
       resources :dogs, except: [:new, :edit]
       resources :appointments, except: [:new, :edit]
+
+      post "/login", to: "auth#login"
+      get "/auto_login", to: "auth#auto_login"
     end
   end
 end
