@@ -8,6 +8,14 @@ export default class Dog extends Component {
       likes: 0,
     };
   }
+
+  handleLikes(event) {
+    let name = event.target.name;
+    this.setState({
+      [name]: parseInt(event.target.value) + 1,
+    });
+  }
+
   render() {
     let dog = this.props.dog;
     return (
