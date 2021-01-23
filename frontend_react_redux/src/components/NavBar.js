@@ -20,9 +20,9 @@ export default function NavBar() {
             </a>
           </span>
           {"    "}
+          <Link className="nav-link" to="/signup">
             Sign Up
           </Link>
-          {"        "}
           {/* <Link to="/users/:id">See Your Page</Link> */}
           <Link className="nav-link" to="/appointments">
             See Available Walks
