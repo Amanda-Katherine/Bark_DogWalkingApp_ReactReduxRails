@@ -101,6 +101,7 @@ class UserPage extends Component {
 
 const mapStateToProps = (state) => {
   let userData = state.users;
+
   let returnedData = userData.user.dogs
     ? {
         id: userData.user.id,
