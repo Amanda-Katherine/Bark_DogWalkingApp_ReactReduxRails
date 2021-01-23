@@ -20,7 +20,6 @@ export default function NavBar() {
             </a>
           </span>
           {"    "}
-          <Link className="nav-link" to="/signup">
             Sign Up
           </Link>
           {"        "}
