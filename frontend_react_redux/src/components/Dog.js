@@ -15,6 +15,14 @@ export default class Dog extends Component {
         <p>
           <strong>{dog.name}</strong>
         </p>
+        <label>Good Dog-o-meter</label>
+        <button
+          name="likes"
+          value={this.state.likes}
+          onClick={(event) => this.handleLikes(event)}
+        >
+          {this.state.likes} likes
+        </button>
         <ul>
           <li>
             {dog.breed} - {dog.weight}
